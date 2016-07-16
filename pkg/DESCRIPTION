@@ -7,7 +7,7 @@ Author: Henry Scharf
 Maintainer: Henry Scharf <henry.scharf@colostate.edu>
 Description: This package contains two primary functions, one for simulating data from the model in the title, and one for fitting data to this model using MCMC.
 License: GPL-2
-Depends: R (>= 3.1.0), abind, RcppArmadillo
+Depends: R (>= 3.1.0), abind, RcppArmadillo, Rcpp
 Imports:
     Rcpp (>= 0.11.6)
 LinkingTo: Rcpp, RcppArmadillo
