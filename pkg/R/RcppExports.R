@@ -32,6 +32,7 @@
 #' @return list of chains for each parameter
 #' @useDynLib mingle
 #' @importFrom Rcpp sourceCpp
+#' @export
 fit_mingle <- function(N_iterations, mu, phi, alpha, beta, p1, sigsq, c, w, alpha_p1, beta_p1, alpha_phi, beta_phi, alpha_alpha, beta_alpha, mu_beta, sigsq_beta, a_sigsq, b_sigsq, a_c, b_c, beta_p1_tune, beta_phi_tune, sigsq_alpha_tune) {
     .Call('mingle_fit_mingle', PACKAGE = 'mingle', N_iterations, mu, phi, alpha, beta, p1, sigsq, c, w, alpha_p1, beta_p1, alpha_phi, beta_phi, alpha_alpha, beta_alpha, mu_beta, sigsq_beta, a_sigsq, b_sigsq, a_c, b_c, beta_p1_tune, beta_phi_tune, sigsq_alpha_tune)
 }

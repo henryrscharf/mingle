@@ -1011,6 +1011,7 @@ double SampleP1(const double p1_iter,
 //' @return list of chains for each parameter
 //' @useDynLib mingle
 //' @importFrom Rcpp sourceCpp
+//' @export
 // [[Rcpp::export]]
 List fit_mingle(const int N_iterations,
 		     const NumericVector mu, //mean process|data
