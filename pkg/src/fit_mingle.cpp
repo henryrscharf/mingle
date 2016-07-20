@@ -1041,6 +1041,7 @@ List fit_mingle(const int N_iterations,
   int n_animals = mu_field(1).n_rows;
   int T = mu_field(1).n_cols;
   arma::field<cube> w_field = ReadField(w);
+  delete w;
   arma::mat conditional_M_mat = MakeConditionalMMatrix(p1(1), phi(1));
   arma::cube K_cube = MakePrecisionKernel(alpha(1), w_field(1), c(1));
   int mu_index = floor(R::runif(0, mu_field.n_elem));
@@ -1048,7 +1049,6 @@ List fit_mingle(const int N_iterations,
   arma::cube w_cube = w_field(1);
   arma::cube mubar_cube = MakeMubar(w_cube, mu_cube);
   arma::cube mutil_cube = MakeMuTilde(w_cube, mu_cube, mubar_cube);
-  free(w);
   for (int iter = 2; iter < N_iterations; iter++){
     mu_index = floor(R::runif(0, mu_field.n_elem));
     mu_cube = mu_field(mu_index);
