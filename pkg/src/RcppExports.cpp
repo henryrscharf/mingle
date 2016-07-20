@@ -7,7 +7,7 @@
 using namespace Rcpp;
 
 // fit_mingle
-List fit_mingle(const int N_iterations, const NumericVector mu, arma::vec phi, arma::vec alpha, arma::vec beta, arma::vec p1, arma::vec sigsq, arma::vec c, NumericVector w, const double alpha_p1, const double beta_p1, const double alpha_phi, const double beta_phi, const double alpha_alpha, const double beta_alpha, const double mu_beta, const double sigsq_beta, const double a_sigsq, const double b_sigsq, const double a_c, const double b_c, const double beta_p1_tune, const double beta_phi_tune, const double sigsq_alpha_tune);
+List fit_mingle(const int N_iterations, const NumericVector mu, arma::vec phi, arma::vec alpha, arma::vec beta, arma::vec p1, arma::vec sigsq, arma::vec c, const NumericVector w, const double alpha_p1, const double beta_p1, const double alpha_phi, const double beta_phi, const double alpha_alpha, const double beta_alpha, const double mu_beta, const double sigsq_beta, const double a_sigsq, const double b_sigsq, const double a_c, const double b_c, const double beta_p1_tune, const double beta_phi_tune, const double sigsq_alpha_tune);
 RcppExport SEXP mingle_fit_mingle(SEXP N_iterationsSEXP, SEXP muSEXP, SEXP phiSEXP, SEXP alphaSEXP, SEXP betaSEXP, SEXP p1SEXP, SEXP sigsqSEXP, SEXP cSEXP, SEXP wSEXP, SEXP alpha_p1SEXP, SEXP beta_p1SEXP, SEXP alpha_phiSEXP, SEXP beta_phiSEXP, SEXP alpha_alphaSEXP, SEXP beta_alphaSEXP, SEXP mu_betaSEXP, SEXP sigsq_betaSEXP, SEXP a_sigsqSEXP, SEXP b_sigsqSEXP, SEXP a_cSEXP, SEXP b_cSEXP, SEXP beta_p1_tuneSEXP, SEXP beta_phi_tuneSEXP, SEXP sigsq_alpha_tuneSEXP) {
 BEGIN_RCPP
     Rcpp::RObject __result;
@@ -20,7 +20,7 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< arma::vec >::type p1(p1SEXP);
     Rcpp::traits::input_parameter< arma::vec >::type sigsq(sigsqSEXP);
     Rcpp::traits::input_parameter< arma::vec >::type c(cSEXP);
-    Rcpp::traits::input_parameter< NumericVector >::type w(wSEXP);
+    Rcpp::traits::input_parameter< const NumericVector >::type w(wSEXP);
     Rcpp::traits::input_parameter< const double >::type alpha_p1(alpha_p1SEXP);
     Rcpp::traits::input_parameter< const double >::type beta_p1(beta_p1SEXP);
     Rcpp::traits::input_parameter< const double >::type alpha_phi(alpha_phiSEXP);
