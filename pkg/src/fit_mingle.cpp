@@ -1048,6 +1048,7 @@ List fit_mingle(const int N_iterations,
   arma::cube w_cube = w_field(1);
   arma::cube mubar_cube = MakeMubar(w_cube, mu_cube);
   arma::cube mutil_cube = MakeMuTilde(w_cube, mu_cube, mubar_cube);
+  free(w);
   for (int iter = 2; iter < N_iterations; iter++){
     mu_index = floor(R::runif(0, mu_field.n_elem));
     mu_cube = mu_field(mu_index);
