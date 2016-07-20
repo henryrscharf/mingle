@@ -1043,7 +1043,6 @@ List fit_mingle(const int N_iterations,
   arma::field<cube> w_field = ReadField(w);
   arma::mat conditional_M_mat = MakeConditionalMMatrix(p1(1), phi(1));
   arma::cube K_cube = MakePrecisionKernel(alpha(1), w_field(1), c(1));
-  free(w);
   int mu_index = floor(R::runif(0, mu_field.n_elem));
   arma::cube mu_cube = mu_field(mu_index);
   arma::cube w_cube = w_field(1);
